@@ -8,7 +8,7 @@ Dataclasses Godot Plugin
 
 <img alt="Godot3" src="https://img.shields.io/badge/-Godot 3.x-478CBF?style=for-the-badge&logo=godotengine&logoWidth=20&logoColor=white" />
 <br>
-<img alt="Dataclasses logo" src="logo.png" />
+<img alt="Dataclasses logo" src="https://raw.githubusercontent.com/3ddelano/dataclasses-godot/main/logo.png" />
 
 
 
@@ -100,7 +100,7 @@ Customization
   
   Whether to print properties on newlines when printing
 
-<img src="./_assets/quick_start_output.png">
+<img src="https://raw.githubusercontent.com/3ddelano/dataclasses-godot/main/_assets/quick_start_output.png">
 
 
 
@@ -120,7 +120,7 @@ Customization Examples
 	func _ready():
 		print(MyClass.new())
 	```
-	<img src="./_assets/print_newline_output.png">
+	<img src="https://raw.githubusercontent.com/3ddelano/dataclasses-godot/main/_assets/print_newline_output.png">
 
 #### Run res://sample/Sample.tscn for an example
 

@@ -40,12 +40,15 @@ func from_dict(p_dict: Dictionary):
 	for key in p_dict:
 		if not key in self:
 			printerr("Dataclass:from_dict: Error: Key \"%s\" not found in dataclass \"%s\"" % [key, __name__])
-			return
+			continue
 
 		# Check for types match
 		var typeof_expected = typeof(get(key))
 		var typeof_received = typeof(p_dict[key])
-		if typeof_expected != TYPE_NIL and typeof_received != typeof_expected:
+		if typeof_expected != TYPE_NIL and typeof_received != typeof_expected and (
+			(not typeof_expected in [TYPE_INT, TYPE_REAL]) and
+			(not typeof_received in [TYPE_INT, TYPE_REAL])
+		):
 			printerr("Dataclass:from_dict: Warning: Key \"%s\" has type %s but expected type %s in dataclass \"%s\"" % [key, __type_to_string(typeof_received) , __type_to_string(typeof_expected), __name__])
 		set(key, p_dict[key])
 
@@ -91,8 +94,10 @@ func _to_string() -> String:
 	var props = PoolStringArray()
 	for prop in all_props:
 		var value = get(prop.name)
+		if typeof(value) == TYPE_STRING:
+			value = "\"" + value + "\""
 		if value != null or __options__.include_null_in_print:
-			props.append("%s=%s" % [prop.name, get(prop.name)])
+			props.append("%s=%s" % [prop.name, value])
 
 	var separator = ", "
 	var newline = ""

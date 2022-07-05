@@ -1,6 +1,6 @@
 Dataclasses Godot Plugin
 =========================================
-###### (Get it from Godot Asset Library - Coming soon)
+###### (Get it from Godot Asset Library - [Dataclasses on AssetLibrary](https://godotengine.org/asset-library/asset/1381))
 
 
 ### Easy to use dataclasses with helpful features
@@ -24,9 +24,15 @@ Features
 
 Installation
 --------------
+- #### From Asset Library
+  
+  Search for "**Dataclasses**" in the `AssetLib` tab in Godot and click Download. Once it has downloaded click Install. In the popup that opens, click Install again.
+  (You **dont** need to enable the plugin in ProjectSettings)
 
-Copy the contents of `addons/dataclasses-godot` into the `addons/` folder in the same directory as your project.
-(You dont need to enable the plugin in ProjectSettings)
+- #### Manual Installation
+  
+  Copy the contents of `addons/dataclasses-godot` into the `addons/` folder in the same directory as your project.
+  (You **dont** need to enable the plugin in ProjectSettings)
 
 
 

@@ -18,6 +18,9 @@ const __DEFAULT_OPTIONS__ = {
 
 	# Whether to print properties on newlines when printing
 	"print_newline": false,
+
+	# Names of properties to exclude when printing
+	"print_exclude": [],
 }
 
 
@@ -94,6 +97,9 @@ func _to_string() -> String:
 
 	var props = PoolStringArray()
 	for prop in all_props:
+		if prop.name in __options__.print_exclude:
+			continue
+
 		var value = get(prop.name)
 		if typeof(value) == TYPE_STRING:
 			value = "\"" + value + "\""

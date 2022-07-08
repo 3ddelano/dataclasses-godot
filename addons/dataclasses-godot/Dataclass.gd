@@ -79,9 +79,10 @@ func __get_props() -> Array:
 	all_props.pop_front()
 
 	if __options__.sort_keys:
-		all_props.sort()
+		all_props.sort_custom(_PropertySorterAlphabetical, "sort_ascending")
 
 	return all_props
+
 
 func __type_to_string(p_type: int) -> String:
 	var types = ["NIL", "BOOL", "INT", "REAL", "STRING", "VECTOR2", "RECT2", "VECTOR3", "TRANSFORM2D", "PLANE", "QUAT", "AABB", "BASIS", "TRANSFORM", "COLOR", "NODE_PATH", "RID", "OBJECT", "DICTIONARY", "ARRAY", "RAW_ARRAY", "INT_ARRAY", "REAL_ARRAY", "STRING_ARRAY", "VECTOR2_ARRAY", "VECTOR3_ARRAY", "COLOR_ARRAY", "MAX"]

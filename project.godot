@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "Dataclass",
 "language": "GDScript",
 "path": "res://addons/dataclasses-godot/Dataclass.gd"
+}, {
+"base": "Reference",
+"class": "_PropertySorterAlphabetical",
+"language": "GDScript",
+"path": "res://addons/dataclasses-godot/_PropertySorterAlphabetical.gd"
 } ]
 _global_script_class_icons={
-"Dataclass": "res://addons/dataclasses-godot/DataclassIcon.svg"
+"Dataclass": "res://addons/dataclasses-godot/DataclassIcon.svg",
+"_PropertySorterAlphabetical": ""
 }
 
 [application]

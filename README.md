@@ -88,6 +88,9 @@ Documentation
 | self       | from_dict(dict: Dictionary) | Create object from Dictionary  |
 | Dictionary | to_dict()                   | Serialize object to Dictionary |
 
+### Metadata
+
+Classes that inherit from Dataclass have the `is_dataclass` meta set to `true`
 
 
 Customization
@@ -105,6 +108,9 @@ Customization
 - **print_newline**: false
   
   Whether to print properties on newlines when printing
+- **print_exclude**: []
+
+  Names of properties to exclude when printing
 
 <img src="https://raw.githubusercontent.com/3ddelano/dataclasses-godot/main/_assets/quick_start_output.png">
 

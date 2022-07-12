@@ -98,6 +98,7 @@ class SomeClass extends CustomDataclass:
 	var str1 = "hey"
 	var int1 = 12345
 	var arr1 = [1, "hello", 8.1]
+	var empty_dict = {}
 
 
 func _ready():

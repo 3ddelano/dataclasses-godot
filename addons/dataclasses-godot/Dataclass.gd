@@ -120,12 +120,13 @@ func __variant_to_string(value, indent_level = 0) -> String:
 		TYPE_OBJECT:
 			if value == null:
 				return "Object(null)"
-			elif (not value is Script) and value.get_meta("is_dataclass"):
+			elif (not value is Script) and value.has_meta("is_dataclass") and value.get_meta("is_dataclass"):
 				return str(value).indent(tab.repeat(indent_level)).trim_prefix(tab.repeat(indent_level))
 
 			return str(value)
 		TYPE_DICTIONARY:
 			var keys = value.keys()
+			if keys.size() == 0: return "{}"
 			var dict_string = PoolStringArray()
 			for key in keys:
 				dict_string.append("%s: %s" % [key, __variant_to_string(value[key], 0)])

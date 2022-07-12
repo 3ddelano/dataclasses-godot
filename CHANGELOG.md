@@ -4,6 +4,11 @@ Changelog
 This is a high-level changelog for each released versions of the plugin.
 For a more detailed list of past and incoming changes, see the commit history.
 
+Master
+------
+- Fix .get_meta() would spam Output Errors if object was not a `Dataclass`
+- Fix empty dictionary would print on multiple lines if `print_newline` was enabled
+
 1.0.2
 ------
 - Improve printing of Dataclass (recursive algorithm)

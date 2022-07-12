@@ -30,6 +30,11 @@ config/name="Dataclasses"
 run/main_scene="res://sample/Sample.tscn"
 config/icon="res://logo.png"
 
+[display]
+
+window/size/width=100
+window/size/height=50
+
 [editor_plugins]
 
 enabled=PoolStringArray( "res://addons/dataclasses-godot/plugin.cfg" )
